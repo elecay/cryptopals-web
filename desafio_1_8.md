@@ -6,7 +6,7 @@ layout: default
 Detectando AES en modo ECB
 ==========================
 
-En [este archivo]({{ site.baseurl }}/8.txt) hay unos cuantos textos cifrados codificados a hex.
+En [este archivo]({{ site.url }}/8.txt) hay unos cuantos textos cifrados codificados a hex.
 
 Uno de ellos ha sido cifrado con ECB.
 
