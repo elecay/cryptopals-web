@@ -56,7 +56,7 @@ La gente ya "sabe" esto, pero realmente no están convencidos, y creemos que la 
 
 ##¿Cómo comienzo?
 
-[¡Comienza aquí!](set_1.md)
+[¡Comienza aquí!](set_1)
 
 ##¿Quién ha hecho esto?
 
