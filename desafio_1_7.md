@@ -6,7 +6,7 @@ layout: default
 AES en modo ECB
 ===============
 
-El contenido codificado en base64 en [este archivo](/7.txt) ha sido cifrado vía AES-128 en modo ECB bajo la clave:
+El contenido codificado en base64 en [este archivo]({{ site.baseurl }}/7.txt) ha sido cifrado vía AES-128 en modo ECB bajo la clave:
 
 	YELLOW SUBMARINE
 

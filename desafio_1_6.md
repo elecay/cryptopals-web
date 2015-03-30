@@ -12,7 +12,7 @@ Rompiendo clave repetida XOR
 <p>Este desafío no es conceptualmente difícil, pero implica una codificación propensa a errores. Los otros desafíos están para ir haciéndote entrar en calor. Este está para calificarte. Si puedes hacer este, entonces probablemente lo harás bien hasta el set 6.</p>
 </div>
 
-[Aquí](/6.txt) hay un archivo. Ha sido convertido a base64 luego de ser cifrado con XOR por clave repetida.
+[Aquí]({{ site.baseurl }}/6.txt) hay un archivo. Ha sido convertido a base64 luego de ser cifrado con XOR por clave repetida.
 
 Decífralo.
 

@@ -6,7 +6,7 @@ layout: default
 Detectando de un carácter XOR
 =============================
 
-Una de las cadenas de 60 caracteres de largo en [este archivo](/4.txt) ha sido cifrada utilizando cifrado XOR de un carácter.
+Una de las cadenas de 60 caracteres de largo en [este archivo]({{ site.baseurl }}/4.txt) ha sido cifrada utilizando cifrado XOR de un carácter.
 
 Encuéntrala.
 
