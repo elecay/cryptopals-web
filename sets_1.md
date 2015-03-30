@@ -13,11 +13,11 @@ Este set es relativamente fácil. Con una excepción, esto sets deberían llevar
 Si ya has escrito código de cifrado anteriormente, sentirás el deseo de salteártelos. No lo hagas. Al menos dos de ellos (no te diremos cuáles) son peldaños importante para próximos ataques.
 
 
-1. [Convirtiendo de hex a base64](/desafio_1_1)
-2. [XOR fijo](/desafio_1_2)
-3. [Cifrado XOR de un byte](/desafio_1_3)
-4. [Detectando un carácter XOR](/desafio_1_4)
-5. [Implementando clave repetida XOR](/desafio_1_5)
-6. [Rompiendo clave repetida XOR](/desafio_1_6)
-7. [AES en modo ECB](/desafio_1_7)
-8. [Detectando AES en modo ECB](/desafio_1_8)
+1. [Convirtiendo de hex a base64]({{ site.url }}/desafio_1_1)
+2. [XOR fijo]({{ site.url }}/desafio_1_2)
+3. [Cifrado XOR de un byte]({{ site.url }}/desafio_1_3)
+4. [Detectando un carácter XOR]({{ site.url }}/desafio_1_4)
+5. [Implementando clave repetida XOR]({{ site.url }}/desafio_1_5)
+6. [Rompiendo clave repetida XOR]({{ site.url }}/desafio_1_6)
+7. [AES en modo ECB]({{ site.url }}/desafio_1_7)
+8. [Detectando AES en modo ECB]({{ site.url }}/desafio_1_8)
