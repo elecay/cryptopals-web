@@ -7,7 +7,7 @@ Rompiendo clave repetida XOR
 ============================
 
 <div class="warning">
-<h3>Ahora está oficialmente encendido</h3>
+<h3>Ahora comienza lo bueno</h3>
 
 <p>Este desafío no es conceptualmente difícil, pero implica una codificación propensa a errores. Los otros desafíos están para ir haciéndote entrar en calor. Este está para calificarte. Si puedes hacer este, entonces probablemente lo harás bien hasta el set 6.</p>
 </div>

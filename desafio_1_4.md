@@ -10,4 +10,4 @@ Una de las cadenas de 60 caracteres de largo en [este archivo]({{ site.url }}/4.
 
 Encuéntrala.
 
-(Tu código del desafío [#3](/desafio_1_3) debería ayudar.)
+(Tu código del desafío [#3]({{ site.url }}/desafio_1_3) debería ayudar.)
