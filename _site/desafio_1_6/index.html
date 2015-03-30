@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cryptopals</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description=" content="Cryptopals en español">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <a target="_blank" href="https://github.com/elecay/cryptopals-web"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Cryptopals en español</a></h1>
+        <p>Versión en español de Cryptopals (<a href="http://cryptopals.com" target="_blank">http://cryptopals.com/</a>)</p>
+
+
+        <ul>
+            <li><a href="/sets_1">Set 1: Lo básico</a></li>
+            <li><a href="#">Set 2: Cifrado por bloques (en proceso)</a></li>
+            <li><a href="#">Set 3: Cifrado por bloques y flujos (en proceso)</a></li>
+            <li><a href="#">Set 4: Cifrado por flujo y aleatoriedad (en proceso)</a></li>
+            <li><a href="#">Set 5: Diffie-Hellman y amigos (en proceso)</a></li>
+            <li><a href="#">Set 6: RSA y DSA (en proceso)</a></li>
+            <li><a href="#">Set 7: Hashes (en proceso)</a></li>
+          </li>
+        </ul>
+
+        <div class="header-footer">
+          <p class="view"><a href="https://github.com/elecay/cryptopals-web">View the Project on GitHub <small>elecay/cryptopals-web</small></a></p>
+
+
+          <ul>
+            <li><a href="https://github.com/elecay/cryptopals-web/zipball/master">Descargar <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/elecay/cryptopals-web/tarball/master">Descargar <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/elecay/cryptopals-web">Ver en <strong>GitHub</strong></a></li>
+          </ul>
+        </div>
+      </header>
+      <section>
+
+        <h1>Rompiendo clave repetida XOR</h1>
+
+<div class="warning">
+<h3>Ahora está oficialmente encendido</h3>
+
+<p>Este desafío no es conceptualmente difícil, pero implica una codificación propensa a errores. Los otros desafíos están para ir haciéndote entrar en calor. Este está para calificarte. Si puedes hacer este, entonces probablemente lo harás bien hasta el set 6.</p>
+</div>
+
+
+<p><a href="/6.txt">Aquí</a> hay un archivo. Ha sido convertido a base64 luego de ser cifrado con XOR por clave repetida.</p>
+
+<p>Decífralo.</p>
+
+<p>Aquí te decimos cómo:</p>
+
+<p>Digamos que LARGO_DE_CLAVE es el largo que suponemos de la clave; prueba valores de 2 a (digamos) 40.</p>
+
+<p>Escribe una función que calcule la distancia de edición/distancia Hamming entre dos cadenas. La distancia Hamming es solamente el número de diferencia de bits. La distancia entre:</p>
+
+<pre><code>this is a test
+</code></pre>
+
+<p>y</p>
+
+<pre><code>wokka wokka!!!
+</code></pre>
+
+<p>es de 37. Asegúrate de que tu código está de acuerdo antes de proseguir.</p>
+
+<p>Para cada valor de LARGO_DE_CLAVE, toma el primer grupo de bytes del largo de LARGO_DE_CLAVE, y el segundo grupo del largo de LARGO_DE_CLAVE y calcula la distancia de edición entre ellos. Normaliza el resultado dividiéndolo entre el valor de LARGO_DE_CLAVE.</p>
+
+<p><em>Nota del traductor:</em> Esto es, por ejemplo, para la cadena:</p>
+
+<pre><code>ESTOESUNACADENACIFRADA
+</code></pre>
+
+<p>comienzas con LARGO_DE_CLAVE = 2. Entonces tomas:</p>
+
+<pre><code>ES
+</code></pre>
+
+<p>y</p>
+
+<pre><code>TO
+</code></pre>
+
+<p>y calculas la distancia de edición entre esos dos grupos.</p>
+
+<p>El LARGO_DE_CLAVE con el menor valor normalizado de la distancia de edición es probablemente tu clave. Puedes proceder quizás con los LARGO_DE_CLAVE con menores resultados de 2 o 3. O toma 4 bloques de LARGO_DE_CLAVE en lugar de 2 y calcula el promedio de distancias.</p>
+
+<p>Ahora que probablemente sepas el LARGO_DE_CLAVE: rompe el texto cifrado en bloques de largo de LARGO_DE_CLAVE.</p>
+
+<p>Ahora transpón los bloques: haz un bloque que es la primer letra de cada bloque, y un bloque con el segundo byte de cada bloque, y así sucesivamente.</p>
+
+<p>Resuelve cada bloque como si fuese un XOR de un byte. Ya tienes código para hacer esto.</p>
+
+<p>Para cada bloque, la clave XOR de un byte que produce el mejor histograma es parte de la clave XOR de clave repetida para ese bloque. Pónlas todas juntas y tendrás tu clave.</p>
+
+<p>Este código resultará ser sorprendentemente útil más adelante. El método de romper cifrados con XOR por clave repetida de forma estadística ("Vigenere") es obviamente un ejercicio académico, algo así como "Cifrado 101" (<em>Nota del traductor:</em> los cursos llamados "101" son los cursos de introducción a una materia, en Estados Unidos). Pero más personas "saben cómo" romperlo que las que realmente lo rompen, y una técnica similar rompe algo mucho más importante.</p>
+
+<div class="warning">
+<h3>No, no hay ningún error</h3>
+
+<p>Recibimos más preguntas sobre este desafío que con cualquier otro. Te lo prometemos, no hay ningún error descarado en este texto. En particular, la distancia de "wokka wokka!!!" es realmente 37.</p>
+</div>
+
+
+
+      </section>
+      <footer>
+        <p>Este proyecto es mantenido por <a href="https://github.com/elecay">elecay</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61321607-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

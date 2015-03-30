@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cryptopals</title>
+
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description=" content="Cryptopals en español">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <a target="_blank" href="https://github.com/elecay/cryptopals-web"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    <div class="wrapper">
+      <header>
+        <h1><a href="/">Cryptopals en español</a></h1>
+        <p>Versión en español de Cryptopals (<a href="http://cryptopals.com" target="_blank">http://cryptopals.com/</a>)</p>
+
+
+        <ul>
+            <li><a href="/sets_1">Set 1: Lo básico</a></li>
+            <li><a href="#">Set 2: Cifrado por bloques (en proceso)</a></li>
+            <li><a href="#">Set 3: Cifrado por bloques y flujos (en proceso)</a></li>
+            <li><a href="#">Set 4: Cifrado por flujo y aleatoriedad (en proceso)</a></li>
+            <li><a href="#">Set 5: Diffie-Hellman y amigos (en proceso)</a></li>
+            <li><a href="#">Set 6: RSA y DSA (en proceso)</a></li>
+            <li><a href="#">Set 7: Hashes (en proceso)</a></li>
+          </li>
+        </ul>
+
+        <div class="header-footer">
+          <p class="view"><a href="https://github.com/elecay/cryptopals-web">View the Project on GitHub <small>elecay/cryptopals-web</small></a></p>
+
+
+          <ul>
+            <li><a href="https://github.com/elecay/cryptopals-web/zipball/master">Descargar <strong>ZIP File</strong></a></li>
+            <li><a href="https://github.com/elecay/cryptopals-web/tarball/master">Descargar <strong>TAR Ball</strong></a></li>
+            <li><a href="https://github.com/elecay/cryptopals-web">Ver en <strong>GitHub</strong></a></li>
+          </ul>
+        </div>
+      </header>
+      <section>
+
+        <h1>Bienvenido a los desafíos</h1>
+
+<div class="warning">
+<h3>Trabajo en progreso.</h3>
+
+<p>Este sitio contendrá los ocho sets de los desafíos de cifrado, con soluciones en los lenguajes principales.</p>
+</div>
+
+
+<p>Pero: aún no. Si esperamos a darle a "publicar" cuando esté todo terminado, podríamos aún estar escribiendo esto en 2015 (<em>Nota del traductor</em>: ya estamos en 2015 y el último set aún no está publicado). Así que iremos publicando a medida que vayamos avanzando. En particular: danos un poco de tiempo en la publicación de las soluciones.</p>
+
+<p>No podemos introducir esto de una mejor forma a como lo hizo <a href="https://blog.pinboard.in/2013/04/the_matasano_crypto_challenges/">Maciej Ceglowski</a>, así que lee primero ese artículo.</p>
+
+<p>Hemos creado una colección de 48 ejercicios que demuestran ataques de cifrado en el mundo real.</p>
+
+<p>Esta es una forma diferente de aprender acerca de cifrado a tomar una clase o leer un libro. Te daremos problemas a resolver. Son derivados de debilidades en sistemas en el mundo real y construcciones de cifrado modernas. Te daremos suficiente información para que aprendas acerca de los conceptos fundamentales por ti mismo. Cuando finalices, no solamente tendrás un conocimiento acerca de cómo los sistema de cifrado están construidos, sino también cómo son atacados.</p>
+
+<h2>¿Cuáles son las reglas?</h2>
+
+<p>¡No hay ninguna! Durante muchos años hemos impulsado estos desafíos por correo electrónico, pidiéndole a los participantes que no compartan sus resultados. ¡El sistema de honor funcionó de mil maravillas! Pero ahora estamos listos para poner a un lado la ceremonia, publicar los desafíos y que todos puedan trabajar en ellos.</p>
+
+<h2>¿Cuánto necesito saber?</h2>
+
+<p>Si tienes algún problema con las matemáticas en estos desafíos, deberías ser capaz de encontrar algún alumno de noveno año que te ayude. Resulta que las matemáticas que muchos ataques de cifrado moderno realizan son bastante elementales.</p>
+
+<h2>¿Cuánto debo saber de cifrado?</h2>
+
+<p>Nada. Esa es la idea.</p>
+
+<h2>Así que, ¿qué debo saber?</h2>
+
+<p>Deberías ser capaz de escribir código de forma profesional en algún lenguaje de programación. Hemos recibido soluciones en C, C++, Python, Ruby, Perl, Visual Basic, X86 Assembly, Haskell, y Lisp. Sorpréndenos con algún otro lenguaje. Nuestro amigo Maciej dice que estos desafíos son buenos para aprender un nuevo lenguaje, así que que quizás sea el momento de elegir alguno como Clojure o Rust.</p>
+
+<h2>¿Qué debería esperar?</h2>
+
+<p>Ahora mismo tenemos siete sets. Su dificultad aumente progresivamente. De nuevo: están basados en vulnerabilidades del mundo real. Ninguno de ellos es un "puzzle". Ninguno de ellos está diseñado para hacerte tropezar. Algunos de estos ataques son inteligente, y si no estás familiarizado con la astucia de cifrado... bueno, debería gustarte solucionar puzzles. Un reconocimiento al hip-hop de MTV de principios de los '90 tampoco está mal.</p>
+
+<h2>¿Pueden darme una larga explicación de porqué han decidido hacer esto?</h2>
+
+<p><em>Resulta que sí podemos.</em></p>
+
+<p>Si no estás familiarizado con el cifrado o si tu conocimiento viene de cosas como Criptografía Aplicada, esto puede sorprenderte: la mayor parte del cifrado está fatalmente dañado. Los sistemas en los que confiamos hoy en día y que no se sepa que están fatalmente dañados están en camino a estarlo. Nadie está seguro de que TLS 1.2 o SSH 2 o OTR vayan a permanecer seguros de la manera en que fueron diseñados.</p>
+
+<p>El estado actual de los programas informáticos de seguridad de cifrado es similar al estado de los programas de seguridad en la década de los '90. Específicamente: hasta cerca de 1995, no era de conocimiento popular que los programas diseñados por humanos pudiesen tener problemas de cálculo. Como resultado, nadie puedo establecer un tamaño apropiado para un buffer, y la humanidad se ha pasado más de una década y media gastando miles de millones de dólares corrigiendo vulnerabilidades de memoria corrupta.</p>
+
+<p>El cálculo no es un problema difícil. Pero el cifrado sí lo es. Hay pocas cosas que puedes hacer para equivocarte al calcular el tamaño de un buffer. Pero hay decenas, probablemente cientos de pequeñas y oscuras cosas que puedes hacer para tomar un sistema de cifrado que debería se seguro, incluso contra un adversario con más núcleos de CPU (Unidad central de procesamiento) que átomos en el sistema solar, y resolverlo con un script en Perl en 15 segundos. No nos creas a nosotros: haz los desafíos y verás.</p>
+
+<p>La gente ya "sabe" esto, pero realmente no están convencidos, y creemos que la razón de ello es que hay realmente muy pocas personas que saben cómo implementar los ataques más conocidos. Así que, envíanos un correo y te contaremos acerca de ellos.</p>
+
+<h2>¿Cómo comienzo?</h2>
+
+<p><a href="set_1.md">¡Comienza aquí!</a></p>
+
+<h2>¿Quién ha hecho esto?</h2>
+
+<ul>
+<li>Thomas Ptacek (<a href="https://twitter.com/tqbf">@tqbf</a>)</li>
+<li>Sean Devlin (<a href="https://twitter.com/spdevlin">@spdevlin</a>)</li>
+<li>Alex Balducci (<a href="https://twitter.com/iamalexalright">@iamalexalright</a>)</li>
+<li>Marcin Wielgoszewski (<a href="https://twitter.com/marcinw">@marcinw</a>)</li>
+</ul>
+
+
+<p>No podríamos haber realizado esto sin la ayuda de muchas otras personas. Aproximadamente en orden de influencia:</p>
+
+<ul>
+<li><a href="http://www.rootlabs.com/">Nate Lawson</a> nos enseñó virtualmente todo lo que sabemos sobre cifrado.</li>
+<li><a href="http://trevp.net/">Trevor Perrin</a> le enseño alguna cosa a Nate. Puedo contarte una historia bastante convincente acerca de cómo Trevor es el origen intelectual de cada ataque exitoso sobre TLS en los últimos 5 años.</li>
+<li>Thai Duong y Juliano Rizzo son los padrinos de los programas prácticos de seguridad de cifrado. Muchas cosas en estos desafíos no tenían sentido para nosotros hasta que Thai y Juliano las explotaron.</li>
+</ul>
+
+
+
+      </section>
+      <footer>
+        <p>Este proyecto es mantenido por <a href="https://github.com/elecay">elecay</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-61321607-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

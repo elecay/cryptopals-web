@@ -1,0 +1,8 @@
+name: "Cryptopals"
+description: "Cryptopals en español"
+
+url: "http://elecay.github.io/cryptopals-web"
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
