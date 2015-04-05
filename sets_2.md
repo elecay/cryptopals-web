@@ -16,8 +16,8 @@ Tres de los desafíos en este set son extremadamente importantes al romper cifra
 9. [Implementando relleno PKCS#7]({{ site.url }}/desafio_2_9)
 10. [Implementando modo CBC]({{ site.url }}/desafio_2_10)
 11. [Un oráculo de detección ECB/CBC]({{ site.url }}/desafio_2_11)
-12. [Descifrado de un byte a la vez ECB (Simple)]({{ site.url }}/desafio_2_12)
-13. [ECB copiar y pegar]({{ site.url }}/desafio_2_13)
-14. [Descifrado de un byte a la vez ECB (Complejo)]({{ site.url }}/desafio_2_14)
-15. [Validación de relleno PKCS#7]({{ site.url }}/desafio_2_15)
-16. [Ataque de inversión de bits CBC]({{ site.url }}/desafio_2_16)
+12. Descifrado de un byte a la vez ECB (Simple)
+13. ECB copiar y pegar
+14. Descifrado de un byte a la vez ECB (Complejo)
+15. Validación de relleno PKCS#7
+16. Ataque de inversión de bits CBC
