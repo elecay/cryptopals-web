@@ -45,23 +45,22 @@
       </header>
       <section>
 
-        <h1>Cifrado XOR de un byte</h1>
+        <h1>Implementando modo CBC</h1>
 
-<p>A la cadena cifrada en hex:</p>
+<p>El modo CBC es un modo de cifrado por bloque que le permite cifrar mensajes de largo irregular, a pesar del hecho de que el cifrado por bloque solamente transforma bloques individuales.</p>
 
-<pre><code>1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
-</code></pre>
+<p>En modo CBC cada bloque de texto cifrado es sumado al siguiente bloque de texto plano antes del próximo llamado al  cifrado principal.</p>
 
-<p>...le ha sido aplicada un XOR contra un solo carácter. Encuentra la clave y descifra el mensaje.</p>
+<p>El primer bloque de texto plano, el cual no tienen ningún bloque de texto cifrado previo, es sumado a un "falso bloque de texto cifrado de posición cero" llamado el vector de inicialización o IV (Initialization Vector, en inglés).</p>
 
-<p>Podrías hacerlo a mano. Pero no: escribe un código que lo haga por ti.</p>
+<p>Implementa el modo CBC a mano tomando la función ECB que has escrito previamente, haciéndola cifrar en lugar de descifrar (verifica esto descifrando lo que hayas cifrado al hacer pruebas), y utilizando tu función XOR de previos ejercicios, combínalas.</p>
 
-<p>¿Cómo? Desarrolla algún método para "puntuar" un texto plano en inglés. La frecuencia de caracteres es una buena métrica. Evalúa cada resultado y elige el que tenga mejor puntuación.</p>
+<p><a href="http://localhost:4000/10.txt">El archivo aquí</a> es ininteligible (algo así) cuando lo descifras usando CBC contra "YELLOW SUBMARINE" con un IV de todos los ASCII 0 (\x00\x00\x00 &amp;c)</p>
 
 <div class="warning">
-<h3>Logro desbloqueado</h3>
+<h3>No hagas trampa</h3>
 
-<p>Ahora tienes nuestro permiso para realizar bromas "ETAOIN SHRDLU" en Twitter.</p>
+<p>No utilices el código CBC de OpenSSL para realizar el modo CBC, ni siquiera para verificar tus resultados. ¿Cuál es el sentido de hacer esto si no vas a aprender nada?</p>
 </div>
 
 

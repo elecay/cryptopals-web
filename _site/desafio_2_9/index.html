@@ -45,25 +45,21 @@
       </header>
       <section>
 
-        <h1>Cifrado XOR de un byte</h1>
+        <h1>Implementando relleno PKCS#7</h1>
 
-<p>A la cadena cifrada en hex:</p>
+<p>Un cifrado por bloque transforma un bloque de texto plano de tamaño fijo (usualmente de 8 o 16 bytes) a un texto cifrado. Pero casi nunca se busca transforma un solo bloque; lo que se cifra son mensajes de tamaños irregulares.</p>
 
-<pre><code>1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+<p>Una forma de representar mensajes de largo irregular es mediante el relleno, creando un texto plano que es múltiplo del tamaño del bloque. El esquema de relleno más popular es el llamado PKCS#7.</p>
+
+<p>Así que: rellena cualquier bloque a un tamaño específico, agregándole el número de bytes de relleno al final del bloque. Por ejemplo,</p>
+
+<pre><code>"YELLOW SUBMARINE"
 </code></pre>
 
-<p>...le ha sido aplicada un XOR contra un solo carácter. Encuentra la clave y descifra el mensaje.</p>
+<p>...rellenado a 20 bytes sería:</p>
 
-<p>Podrías hacerlo a mano. Pero no: escribe un código que lo haga por ti.</p>
-
-<p>¿Cómo? Desarrolla algún método para "puntuar" un texto plano en inglés. La frecuencia de caracteres es una buena métrica. Evalúa cada resultado y elige el que tenga mejor puntuación.</p>
-
-<div class="warning">
-<h3>Logro desbloqueado</h3>
-
-<p>Ahora tienes nuestro permiso para realizar bromas "ETAOIN SHRDLU" en Twitter.</p>
-</div>
-
+<pre><code>"YELLOW SUBMARINE\x04\x04\x04\x04"
+</code></pre>
 
 
       </section>

@@ -45,25 +45,25 @@
       </header>
       <section>
 
-        <h1>Cifrado XOR de un byte</h1>
+        <h1>Un oráculo de detección ECB/CBC</h1>
 
-<p>A la cadena cifrada en hex:</p>
+<p>Ahora que tienes ECB y CBC funcionando:</p>
 
-<pre><code>1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736
+<p>Escribe una función para generar llaves AES al azar; esto es, 16 bytes al azar.</p>
+
+<p>Escribe una función que cifra información bajo una llave desconocida; esto es, una función que genera llaves al azar y cifra utilizándolas.</p>
+
+<p>La función debe verse así:</p>
+
+<pre><code>encryption_oracle(tu-texto)
+=&gt; [GARABATOS SIN SENTIDO]
 </code></pre>
 
-<p>...le ha sido aplicada un XOR contra un solo carácter. Encuentra la clave y descifra el mensaje.</p>
+<p>Por debajo, has que la función <em>agregue</em> de 5 a 10 bytes (este valor se elije al azar) <em>antes</em> del texto plano y de 5 a 10 bytes <em>después</em> del texto plano.</p>
 
-<p>Podrías hacerlo a mano. Pero no: escribe un código que lo haga por ti.</p>
+<p>Ahora, la función debe elegir cifrar bajo ECB la mitad de las veces, y bajo CBC la otra mitad (utiliza IVs al azar cada vez para CBC). Utiliza rand(2) para elegir cual utilizar.</p>
 
-<p>¿Cómo? Desarrolla algún método para "puntuar" un texto plano en inglés. La frecuencia de caracteres es una buena métrica. Evalúa cada resultado y elige el que tenga mejor puntuación.</p>
-
-<div class="warning">
-<h3>Logro desbloqueado</h3>
-
-<p>Ahora tienes nuestro permiso para realizar bromas "ETAOIN SHRDLU" en Twitter.</p>
-</div>
-
+<p>Detecta qué modo de cifrado por bloque es utilizado en cada oportunidad. Deberías terminar con un código que, evaluando un bloque que puede estar cifrado con ECB o CBC, determina cuál de los dos es utilizado.</p>
 
 
       </section>
